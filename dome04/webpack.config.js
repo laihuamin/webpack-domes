@@ -1,18 +1,10 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-    entry: './main.jsx',
+    entry: './index.js',
     output: {
+        path: __dirname,
         filename: 'bundle.js'
     },
-    module: {
-        loaders: [
-            {
-                test: /\.js?$/,
-                exclude: /node_modules/,                           
-                loader:'babel-loader',
-                query: {
-                    presets: ['es2015','react']
-                }
-            }
-        ]
-    }
+    plugins: [new HtmlWebpackPlugin()]
 }
