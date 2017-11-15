@@ -1,5 +1,4 @@
 module.exports = {
-    devtool: 'source-map',
     entry: './main.js',  //打包的路口文件
     output: {
         path: __dirname,
