@@ -4,13 +4,20 @@ module.exports = {
     entry: './main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        pathinfo: true
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                use: ['babel-loader']
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['es2015']
+                    }
+                }
             }
         ]
     }
