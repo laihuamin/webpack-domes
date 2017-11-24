@@ -22,3 +22,13 @@ module: {
     ]
 }
 ```
+
+### css-loader
+
+这个loader是用来处理css文件的，其实webpack最初的目的就是用来打包js文件的，如果想要打包其他的比如css就得用到css-loader，如果想要打包html就得用到html-loader，同理一次类推，那么我们来看一下css-loader的基本用法
+```
+{
+    test: /\.css$/,
+    use: ['style-loader','css-loader']
+}
+```
